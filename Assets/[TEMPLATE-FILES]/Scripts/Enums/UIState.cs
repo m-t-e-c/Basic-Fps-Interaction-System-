@@ -1,0 +1,8 @@
+public enum UIState
+{
+    MAIN_MENU_SCREEN,
+    PAUSE_MENU_SCREEN,
+    GAMEPLAY_SCREEN,
+    WIN_SCREEN,
+    LOSE_SCREEN
+}
