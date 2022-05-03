@@ -33,6 +33,7 @@ public class Player_Movement : Character
     private void Update()
     {
         Movement();
+        GroundCheck();
     }
     private void Movement()
     {
@@ -60,5 +61,13 @@ public class Player_Movement : Character
 
         m_CharacterController.Move(playerVelocity * Time.deltaTime);
         directionY -= m_GravityAmount * Time.deltaTime;
+    }
+
+    private void GroundCheck()
+    {
+        if(transform.position.y < -20f)
+        {
+            transform.position = Vector3.zero;
+        }
     }
 }
